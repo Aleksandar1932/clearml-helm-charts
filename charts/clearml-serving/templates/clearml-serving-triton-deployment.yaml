@@ -41,7 +41,7 @@ spec:
             - name: EXTRA_PYTHON_PACKAGES
               value: '{{ join " " .Values.clearml_serving_triton.extraPythonPackages }}'
             {{- end }}
-          image: "{{ .Values.clearml_serving_triton.image }}:{{ .Chart.AppVersion }}"
+          image: "allegroai/clearml-serving-triton:1.2.0-22.07"
           name: clearml-serving-triton
           ports:
             - containerPort: 8001
