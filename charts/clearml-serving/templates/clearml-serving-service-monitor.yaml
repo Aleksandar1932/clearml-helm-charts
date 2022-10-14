@@ -1,0 +1,17 @@
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  name: clearml-serving-servicemonitor
+  namespace: clearml-serving
+  labels:
+    name: clearml-serving-servicemonitor
+    release: prometheus
+spec:
+  selector:
+    matchLabels:
+      app: clearml-serving-statistics
+  namespaceSelector:
+    matchNames:
+    - clearml-serving
+  endpoints:
+  - port: "9999"
