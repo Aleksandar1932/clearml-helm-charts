@@ -24,6 +24,7 @@ kafka:
   resources: {}
 
 prometheus:
+  enabled: true
   image: prom/prometheus:v2.34.0
   nodeSelector: {}
   tolerations: []
@@ -31,6 +32,7 @@ prometheus:
   resources: {}
 
 grafana:
+  enabled: true
   image: grafana/grafana:8.4.4-ubuntu
   nodeSelector: {}
   tolerations: []
@@ -74,7 +76,7 @@ clearml_serving_inference:
 
 clearml_serving_triton:
   enabled: true
-  image: allegroai/clearml-serving-triton
+  image: allegroai/clearml-serving-triton:1.2.0-22.07
   nodeSelector: {}
   tolerations: []
   affinity: {}

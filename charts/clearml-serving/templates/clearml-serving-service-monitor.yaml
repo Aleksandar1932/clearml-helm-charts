@@ -1,3 +1,4 @@
+{{if not .Values.prometheus.enabled }}
 apiVersion: monitoring.coreos.com/v1
 kind: ServiceMonitor
 metadata:
@@ -15,3 +16,4 @@ spec:
     - clearml-serving
   endpoints:
   - port: "9999"
+{{ end }}
