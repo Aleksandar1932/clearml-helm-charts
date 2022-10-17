@@ -24,7 +24,7 @@ kafka:
   resources: {}
 
 prometheus:
-  enabled: true
+  enabled: false
   image: prom/prometheus:v2.34.0
   nodeSelector: {}
   tolerations: []
@@ -32,7 +32,7 @@ prometheus:
   resources: {}
 
 grafana:
-  enabled: true
+  enabled: false
   image: grafana/grafana:8.4.4-ubuntu
   nodeSelector: {}
   tolerations: []
